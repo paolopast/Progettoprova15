@@ -4,6 +4,8 @@
 	if($_SESSION['loginlev'] !== 1)
 		header('location: missAutentication.php');
 ?>
+  include_once __DIR__ . '/libs/csrf/csrfprotector.php'; // FIXED
+  csrfProtector::init();
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -63,4 +65,4 @@ header('location: home.php');
 
 ?>
 </body>
-</html>
+</html>
